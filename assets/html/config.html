@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Edit MTMR Config</title>
+
+</head>
+
+<body>
+	<div id="stocks-to-watch"></div>
+	<div id="mtmr-right"></div>
+	<div id="stocks-button-information"></div>
+	<div id="stock-button-base"></div>
+	<div id="custom-buttons"></div>
+	<div id="show-escape"></div>
+	<div id="length-news-title"></div>
+	<div id="length-news-title-button"></div>
+	<button onclick="saveConfig()">Save</button>
+</body>
+
+<script>
+	const BASE = "http://localhost:9999";
+	const GET_CONFIG = "/v1/config/get";
+	const SET_CONFIG = "/v1/config/set";
+	let lastConfig;
+
+	getConfig();
+
+	function clearAllDivs() {
+		document.querySelectorAll("div").forEach(div => {
+			div.innerHTML = "";
+		});
+	}
+
+	async function getConfig() {
+		const configResult = await fetch(`${BASE}${GET_CONFIG}`);
+		let config = await configResult.json();
+		lastConfig = config;
+		buildStocksToWatch(config);
+	}
+
+	async function saveConfig() {
+		let configNew = { ...lastConfig };
+		configNew.stocksToWatch = getLatestStocksToWatch();
+		const testCongigSend = await fetch(`${BASE}${SET_CONFIG}`, {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				config: configNew
+			})
+		});
+	}
+
+	function buildStocksToWatch(config) {
+		const stocksToWatch = document.getElementById("stocks-to-watch");
+		const allStocks = config.stocksToWatch.join("\n");
+		const input = document.createElement('textarea');
+		input.rows = 30;
+		input.cols = 5;
+		input.textContent = allStocks;
+		stocksToWatch.appendChild(input);
+	}
+
+	function getLatestStocksToWatch() {
+		const stocksToWatch = document.getElementById("stocks-to-watch");
+		const newToWatch = stocksToWatch.querySelector('textarea').value;
+		return newToWatch.split('\n');
+	}
+
+
+
+</script>
+
+</html>
