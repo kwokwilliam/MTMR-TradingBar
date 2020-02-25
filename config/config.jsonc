@@ -1,0 +1,60 @@
+{
+  "stocksToWatch": [
+    "SPY",
+    "AAPL",
+    "AMD",
+    "LL",
+    "MSFT",
+    "NVDA",
+    "ROKU",
+    "TSLA",
+    "SPCE",
+    "AMZN",
+    "BA",
+    "BABA",
+    "BYND",
+    "DIS",
+    "FB",
+    "FXI",
+    "GLD",
+    "GOOG",
+    "LYFT",
+    "LMT",
+    "NFLX",
+    "SHOP",
+    "UBER"
+  ],
+  "mtmrRight": [
+    {
+      "type": "timeButton",
+      "formatTemplate": "HH:mm",
+      "width": 50,
+      "align": "right",
+      "bordered": false
+    }
+  ],
+  "stocksButtonInformation": {
+    "type": "group",
+    "align": "center",
+    "bordered": true,
+    "title": "stonks 📈📉📈"
+  },
+  "stockButtonBase": {
+    "type": "shellScriptTitledButton",
+    "align": "center",
+    "bordered": true,
+    "autoResize": true,
+    "refreshInterval": 1
+  },
+  "customButtons": [
+    {
+      "type": "staticButton",
+      "title": "💰✞✞🐂🐂💰",
+      "action": "openUrl",
+      "url": "https://www.messenger.com/t/2500490549988398"
+    }
+  ],
+  "showEscape": false,
+  "lengthNewsTitle": 100,
+  "lengthNewsTitleButton": 650
+}

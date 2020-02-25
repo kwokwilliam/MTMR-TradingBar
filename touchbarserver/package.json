@@ -1,0 +1,35 @@
+{
+  "name": "mtmr-tradingbar",
+  "version": "1.0.0",
+  "description": "A touchbar trading application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && mkdir -p build/assets && cp src/assets build/assets",
+    "start": "npm run build && node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwokwilliam/MTMR-TradingBar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwokwilliam/MTMR-TradingBar/issues"
+  },
+  "homepage": "https://github.com/kwokwilliam/MTMR-TradingBar#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "find-process": "^1.4.3",
+    "node-fetch": "^2.6.0",
+    "run-applescript": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.15",
+    "@types/express": "^4.17.2",
+    "@types/node-fetch": "^2.5.4",
+    "nodemon": "^2.0.2"
+  }
+}

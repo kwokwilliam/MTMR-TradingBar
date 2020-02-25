@@ -1,0 +1,15 @@
+{
+  "name": "stockfetcher",
+  "version": "1.0.0",
+  "description": "Back end to abstract fetching data from yahoo finance and convert it to a websocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node build/index.js",
+    "deploy": "./scripts/deploy.sh",
+    "deployLocal": "./scripts/deployLocal.sh"
+  },
+  "author": "William Kwok",
+  "license": "ISC"
+}

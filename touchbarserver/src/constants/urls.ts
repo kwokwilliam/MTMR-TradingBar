@@ -1,0 +1,46 @@
+export const CURL_LOCATION = "/usr/bin/curl";
+
+export const YAHOO_FINANCE_QUOTE = "https://query1.finance.yahoo.com/v7/finance/quote?symbols="
+export const YAHOO_NEWS_RSS_1 = "https://feeds.finance.yahoo.com/rss/2.0/headline?s="
+export const YAHOO_NEWS_RSS_2 = "&region=US&lang=en-US"
+export const GOOGLE_NEWS_RSS_1 = "https://news.google.com/rss/search?cf=all&hl=en-US&pz=1&q="
+export const GOOGLE_NEWS_RSS_2 = "&gl=US&ceid=US:en";
+export const YAHOO_NEWS_RSS_TOP = "https://news.yahoo.com/rss/mostviewed";
+export const GOOGLE_NEWS_RSS_TOP = "https://news.google.com/news/rss"
+export const ROBINHOOD_STOCK = "https://robinhood.com/stocks/"
+export const BARCHART = "https://www.barchart.com/stocks/quotes/"
+export const BARCHART_COMPARE_TO_SPY_1 = "https://www.barchart.com/stocks/quotes/"
+export const BARCHART_COMPARE_TO_SPY_2 = "/technical-chart?plot=LINE&volume=total&data=I:5&density=L&pricesOn=1&asPctChange=1&logscale=0&im=5&startDate="
+export const BARCHART_COMPARE_TO_SPY_3 = "&endDate="
+export const BARCHART_COMPARE_TO_SPY_4 = "&daterange=specific&sym="
+export const BARCHART_COMPARE_TO_SPY_5 = "&grid=1&height=500&studyheight=100&overlay1="
+export const BARCHART_COMPARE_TO_SPY_6 = "&axis1=false&axis2=false&overlay3=SPY&axis3&isComparison=1"
+
+export const STOCK = "stock";
+
+export const TICKER = "/v1/ticker/";
+export const SET_ACTIVE_STOCK = "/v1/setactive/";
+export const FETCH_START = "/v1/fetch/start";
+export const FETCH_STOP = "/v1/fetch/stop";
+export const TESTER_SHOW = "/v1/tester/show";
+export const TESTER_INCREMENT = "/v1/tester/increment";
+export const REFRESH = "/v1/refresh";
+export const ACTIVE_STOCK_PRICE = "/v1/activestock/price";
+export const ACTIVE_STOCK_REDIRECT_ROBINHOOD = "/v1/activestock/redirectrobinhood";
+export const ACTIVE_STOCK_REDIRECT_BARCHART = "/v1/activestock/redirectbarchart";
+export const ACTIVE_STOCK_GET_TICKER = "/v1/activestock/ticker";
+export const ACTIVE_STOCK_GET_ID = "/v1/activestock/tickerid";
+export const ACTIVE_STOCK_COMPARE_TO_SPY = "/v1/activestock/comparespy"
+export const TOGGLE_TICKER = "/v1/toggleticker";
+export const GET_TICKER_MODE = "/v1/tickermode";
+export const NEWS_FETCH_ACTIVE = "/v1/news/fetch";
+export const NEWS_DECREMENT = "/v1/news/decrement";
+export const NEWS_INCREMENT = "/v1/news/increment";
+export const NEWS_GET_ACTIVE_STORY = "/v1/news/activestory";
+export const NEWS_GET_ACTIVE_URL = "/v1/news/activestoryurl";
+export const NEWS_GET_STORY_NUMBER = "/v1/news/storynumber";
+export const NEWS_GET_ACTIVE_URL_COPY = "/v1/news/activestoryurlnonredirect";
+export const NEWS_FETCH_ACTIVE_GENERAL = "/v1/news/fetchgeneral";
+export const CONFIG = "/v1/config/edit";
+export const GET_CONFIG = "/v1/config/get";
+export const SET_CONFIG = "/v1/config/set";
